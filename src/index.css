@@ -1,0 +1,16 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/font-inter.css);
+
+@import url(./components/App/App.css);
+@import url(./components/Header/Header.css);
+@import url(./components/Main/Main.css);
+@import url(./components/Promo/Promo.css);
+@import url(./components/AboutProject/AboutProject.css);
+@import url(./components/Techs/Techs.css);
+@import url(./components/Student/Student.css);
+@import url(./components/SearchForm/SearchForm.css);
+@import url(./components/Movies/Movies.css);
+@import url(./components/MovieCardList/MovieCardList.css);
+@import url(./components/MovieCard/MovieCard.css);
+
+@import url(./components/Footer/Footer.css);
