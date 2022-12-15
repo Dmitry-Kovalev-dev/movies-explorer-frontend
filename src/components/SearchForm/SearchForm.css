@@ -56,7 +56,7 @@
   border: none;
   margin: 0 0 0 10px;
   padding: 0;
-  transition: background-color 0.2s linear;
+  transition: background-color 0.15s linear;
 }
 
 .form__submit:hover {
@@ -96,4 +96,33 @@
   color: #fff;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .search {
+    padding: 80px 30px 10px;
+  }
+  
+  .form__input {
+    width: calc(100vw - 140px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search {
+    padding: 80px 14px 10px;
+  }
+
+  .form {
+    margin: 0 0 46px;
+  }
+  
+  .form__input {
+    width: calc(100vw - 108px);
+    height: 44px;
+  }
+
+  .search__shorts {
+    margin: 0 12px 43px 0;
+  }
 }

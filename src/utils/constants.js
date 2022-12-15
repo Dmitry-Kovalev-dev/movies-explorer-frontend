@@ -43,3 +43,11 @@ export const savedMovies = [
     img: require(`../images/film_5.jpg`)
   },
 ];
+
+export const mainClassNavLink = 'navigation__link';
+export const navClasses = {
+  link: mainClassNavLink,
+  active: `${mainClassNavLink}_active`,
+  main: `${mainClassNavLink}_type_main`,
+  profile: `${mainClassNavLink}_type_profile`,
+};

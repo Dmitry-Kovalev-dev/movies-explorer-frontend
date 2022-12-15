@@ -19,9 +19,27 @@ const Student = () => {
       <div className="student__portfolio">
         <h4 className="student__portfolio-title">Портфолио</h4>
         <nav className="student__portfolio-items">
-          <a href="/" className="student__portfolio-item">Статичный сайт <span className="student__item-arrow"></span></a>
-          <a href="/" className="student__portfolio-item">Адаптивный сайт<span className="student__item-arrow"></span></a>
-          <a href="/" className="student__portfolio-item">Одностраничное приложение<span className="student__item-arrow"></span></a>
+          <a href="https://github.com/Dmitry-Kovalev-dev/how-to-learn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="student__portfolio-item">
+            Статичный сайт
+            <span className="student__item-arrow"></span>
+          </a>
+          <a href="https://github.com/Dmitry-Kovalev-dev/russian-travel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="student__portfolio-item">
+            Адаптивный сайт
+            <span className="student__item-arrow"></span>
+          </a>
+          <a href="https://github.com/Dmitry-Kovalev-dev/react-mesto-api-full"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="student__portfolio-item">
+            Одностраничное приложение
+            <span className="student__item-arrow"></span>
+          </a>
         </nav>
       </div>
     </section>

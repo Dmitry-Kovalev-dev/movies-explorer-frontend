@@ -52,6 +52,11 @@
   background-color: transparent;
   margin-left: auto;
   cursor: pointer;
+  transition: transform .15s linear;
+}
+
+.movie__button:hover {
+  transform: scale(1.2);
 }
 
 .movie__button_type_disabled {
@@ -66,7 +71,7 @@
   background-image: url(../../images/movie__delete.svg);
   box-shadow: unset;
   border-radius: 100%;
-  transition: box-shadow 0.1s linear;
+  transition: box-shadow .15s linear;
 }
 
 .movie__button_type_delete:hover {
@@ -84,4 +89,34 @@
   color: var(--dark05);
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .movie__img {
+    height: 190px;
+  }
+
+  .movie__info {
+    padding: 14px;
+  }
+
+  .movie__title {
+    margin: 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movie__img {
+    height: 168px;
+  }
+
+  .movie__title {
+    margin: 0 0 14px;
+  }
+
+  .movie__name {
+    font-size: 12px;
+    line-height: 15px;
+    width: 240px;
+  }
 }

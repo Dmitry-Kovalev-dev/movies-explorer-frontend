@@ -53,6 +53,11 @@
   margin: 20px 20px 0 0;
   padding: 0;
   text-decoration: none;
+  transition: opacity 0.15s linear;
+}
+
+.footer__link:hover {
+  opacity: 0.5;
 }
 
 .footer__link:last-child {

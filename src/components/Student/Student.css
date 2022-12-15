@@ -59,7 +59,14 @@
   line-height: 17px;
   color: #fff;
   text-decoration: none;
+  width: max-content;
+  transition: opacity .15s linear;
 }
+
+.student__link:hover {
+  opacity: .5;
+}
+
 
 .student__photo {
   background-image: url(../../images/photo.jpg);
@@ -106,6 +113,11 @@
   border-bottom: 1px solid #424242;
   display: flex;
   justify-content: space-between;
+  transition: opacity .15s linear;
+}
+
+.student__portfolio-item:hover {
+  opacity: .5;
 }
 
 .student__portfolio-item:last-child {
@@ -119,7 +131,7 @@
   background-position: center;
   background-repeat: no-repeat;
   align-self: center;
-  transition: transform 0.2s linear;
+  transition: transform .2s linear;
   background-size: contain;
 }
 
