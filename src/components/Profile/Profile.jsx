@@ -2,7 +2,7 @@ import React from 'react';
 import Greeting from '../Greeting/Greeting';
 
 const Profile = (props) => {
-  const { greeting } = props;
+  const { greeting, onLogout } = props;
   return (
     <main className="content">
       <section className="profile">
@@ -22,7 +22,7 @@ const Profile = (props) => {
           </fieldset>
           <button className="profile__button profile__button_type_submit" type="submit">Редактирвать</button>
         </form>
-        <button type='button' className='profile__button profile__button_type_signout'>Выйти из аккаунта</button>
+        <button type='button' className='profile__button profile__button_type_signout' onClick={onLogout}>Выйти из аккаунта</button>
       </section>
     </main>
   );

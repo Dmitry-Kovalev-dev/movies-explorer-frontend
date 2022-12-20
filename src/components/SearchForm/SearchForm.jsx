@@ -10,6 +10,7 @@ const SearchForm = () => {
             type="text"
             placeholder="Фильм"
             className="form__input"
+            required
           />
         </fieldset>
         <button className="form__submit" type="submit">Найти</button>

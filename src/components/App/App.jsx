@@ -14,6 +14,7 @@ import NotFound from '../NotFound/NotFound';
 const App = () => {
   const [signupBtnValue, setSignupBtnValue] = useState('Зарегистрироваться');
   const [signinBtnValue, setSigninBtnValue] = useState('Войти');
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,7 +22,8 @@ const App = () => {
     setSigninBtnValue('Входим...');
     setTimeout(() => {
       navigate('/movies');
-      setSigninBtnValue('Войти')
+      setSigninBtnValue('Войти');
+      setLoggedIn(true);
     }, 500);
     
   };
@@ -30,13 +32,20 @@ const App = () => {
     setSignupBtnValue('Регистрируем...')
     setTimeout(() => {
       navigate('/movies');
-      setSignupBtnValue('Зарегистрироваться')
+      setSignupBtnValue('Зарегистрироваться');
+      setLoggedIn(true);
     }, 500);
+  };
+
+  const handleSubmitLogout = () => {
+    setLoggedIn(false);
+    navigate('/');
   };
 
   return (
     <CurrentUserContext.Provider value={'hello'}>
       <Header
+        loggedIn={loggedIn}
       />
       <Routes>
 
@@ -68,6 +77,7 @@ const App = () => {
           element={
             <Profile
               greeting={'Привет, Дмитрий!'}
+              onLogout={handleSubmitLogout}
             />
           }
         />

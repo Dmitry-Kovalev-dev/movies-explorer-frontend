@@ -4,11 +4,10 @@ import Navigation from '../Navigation/Navigation';
 import Logo from '../Logo/Logo';
 
 
-const Header = () => {
+const Header = (props) => {
+  const { loggedIn } = props;
   const path = useLocation().pathname;
   const [classNameBurger, setClassNameBurger] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
-  //const loggedIn = true;
 
   const handleClickBurgerBtn = () => {
     setClassNameBurger(' navigation_open');
@@ -18,9 +17,7 @@ const Header = () => {
     setClassNameBurger('');
   };
 
-  const chckbx = (evt) => {
-    setLoggedIn(evt.target.checked);
-  }
+
 
   const burgerBtn =
     loggedIn ?
@@ -39,7 +36,6 @@ const Header = () => {
       <Logo
         classAuth=''
       />
-      <input type="checkbox" onClick={chckbx} /> {/*эмитация аутентификации для проверки верстки хедера*/}
       <Navigation
         className={classNameBurger}
         onCloseBurger={handleClickCloseBurger}

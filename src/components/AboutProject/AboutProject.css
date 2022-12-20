@@ -28,7 +28,7 @@
 .project__textbox {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 550px));
-  gap: 26px 40px;
+  grid-gap: 26px 40px;
   margin: 70px 0 110px;
 }
 
@@ -117,8 +117,8 @@
   }
 
   .project__textbox {
-    grid-template-columns: repeat(2, minmax(300px, 319px));
-    gap: 22px 30px;
+    grid-template-columns: repeat(2, minmax(300px, max-content));
+    grid-gap: 22px 30px;
     margin: 70px 0 93px;
   }
 

@@ -58,7 +58,14 @@
   }
 
   .promo__img {
-    width: 320px;
+    width: 680px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .promo__img {
+    width: 100vw;
     height: 230px;
   }
 }
