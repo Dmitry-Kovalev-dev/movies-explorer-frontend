@@ -113,6 +113,6 @@
 
   .techs__items {
     grid-template-columns: repeat(auto-fit, minmax(84px, max-content));
-    max-width: calc(100vw - 50px);
+    max-width: calc(100% - 50px);
   }
 }

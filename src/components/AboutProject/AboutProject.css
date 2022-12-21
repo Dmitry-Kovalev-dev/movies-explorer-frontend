@@ -173,7 +173,7 @@
   }
 
   .project__timeline {
-    max-width: 100vw;
+    max-width: 100%;
     min-height: 35px;
     margin: 0 0 10px 0;
   }
