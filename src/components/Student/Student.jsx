@@ -18,28 +18,36 @@ const Student = () => {
       </article>
       <div className="student__portfolio">
         <h4 className="student__portfolio-title">Портфолио</h4>
-        <nav className="student__portfolio-items">
-          <a href="https://github.com/Dmitry-Kovalev-dev/how-to-learn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="student__portfolio-item">
-            Статичный сайт
-            <span className="student__item-arrow"></span>
-          </a>
-          <a href="https://github.com/Dmitry-Kovalev-dev/russian-travel"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="student__portfolio-item">
-            Адаптивный сайт
-            <span className="student__item-arrow"></span>
-          </a>
-          <a href="https://github.com/Dmitry-Kovalev-dev/react-mesto-api-full"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="student__portfolio-item">
-            Одностраничное приложение
-            <span className="student__item-arrow"></span>
-          </a>
+        <nav className="student__portfolio-links">
+          <ul className="student__portfolio-items">
+            <li className="student__portfolio-item">
+              <a href="https://github.com/Dmitry-Kovalev-dev/how-to-learn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="student__portfolio-link">
+                Статичный сайт
+                <span className="student__item-arrow"></span>
+              </a>
+            </li>
+            <li className="student__portfolio-item">
+              <a href="https://github.com/Dmitry-Kovalev-dev/russian-travel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="student__portfolio-link">
+                Адаптивный сайт
+                <span className="student__item-arrow"></span>
+              </a>
+            </li>
+            <li className="student__portfolio-item">
+              <a href="https://github.com/Dmitry-Kovalev-dev/react-mesto-api-full"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="student__portfolio-link">
+                Одностраничное приложение
+                <span className="student__item-arrow"></span>
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </section>
