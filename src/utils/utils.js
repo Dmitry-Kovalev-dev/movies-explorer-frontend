@@ -10,13 +10,14 @@ export const formattingTime = (duration) => {
 };
 
 export const filter = (movie, input, isShort) => {
-  input.toLowerCase();
+  const inputLowerCase = input.toLowerCase();
   if (isShort) {
-    return (movie.nameRU.toLowerCase().includes(input) ||
-      movie.nameEN.toLowerCase().includes(input)) && movie.duration <= 40
+    return (movie.nameRU.toLowerCase().includes(inputLowerCase) ||
+      movie.nameEN.toLowerCase().includes(inputLowerCase)) && movie.duration <= 40
   } else {
-    return (movie.nameRU.toLowerCase().includes(input) ||
-      movie.nameEN.toLowerCase().includes(input))
+    console.log(inputLowerCase);
+    return (movie.nameRU.toLowerCase().includes(inputLowerCase) ||
+      movie.nameEN.toLowerCase().includes(inputLowerCase))
   }
 };
 
