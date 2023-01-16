@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import Logo from '../Logo/Logo';
+import { pathValue } from '../../utils/constants';
 
 
 const Header = (props) => {
-  const { loggedIn } = props;
-  const path = useLocation().pathname;
+  const { loggedIn, pathname } = props;
+
   const [classNameBurger, setClassNameBurger] = useState('');
 
   const handleClickBurgerBtn = () => {
@@ -17,24 +17,22 @@ const Header = (props) => {
     setClassNameBurger('');
   };
 
-
-
   const burgerBtn =
     loggedIn ?
       <button className="header__burger-btn" type="button" onClick={handleClickBurgerBtn}></button> :
       <></>;
 
   const headerStyle =
-    path === '/' ?
+    pathname === pathValue.main ?
       {} :
-      (path === '/signup' || path === '/signin' || path === '/404') ?
+      (pathname === pathValue.signUp || pathname === pathValue.signIn || pathname === pathValue.notFound) ?
         { display: 'none' } :
         { backgroundColor: 'transparent' };
 
   return (
     <header className="header" style={headerStyle}>
       <Logo
-        classAuth=''
+        classAuth={''}
       />
       <Navigation
         className={classNameBurger}

@@ -45,6 +45,11 @@
   background-color: #1a6ef7;
 }
 
+.sign__save-input-btn:disabled {
+  background-color: #c5c5c5;
+  cursor: not-allowed;
+}
+
 .sign__caption {
   font-family: var(--font);
   font-style: normal;
@@ -71,6 +76,7 @@
   flex-direction: column;
   border: none;
   padding: 0;
+  margin: 0;
 }
 
 .sign__formfield {
@@ -102,6 +108,11 @@
   color: #fff;
   box-sizing: border-box;
   border-radius: 1px solid transparent;
+  width: 392px;
+}
+
+.sign__input:focus-visible {
+  outline: 1px solid #3DDC84;
 }
 
 .sign__input:invalid {
@@ -116,7 +127,11 @@
   line-height: 12px;
   color: #EE3465;
   margin: 5px 0 5px;
-  height: 12px;
+  height: 24px;
+  width: 392px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -140,5 +155,15 @@
 
   .sign__caption_type_link {
     margin-left: 7px;
+  }
+
+  .sign__input {
+    width: 260px;
+  }
+
+  .sign__input-error {
+    width: 260px;
+    font-size: 8px;
+    white-space: pre-wrap;
   }
 }

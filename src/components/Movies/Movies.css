@@ -4,6 +4,7 @@
   align-items: center;
   padding: 0 70px 80px;
   box-sizing: border-box;
+  min-height: calc(100vh - 74px - 173px);
 }
 
 .movies__more {
@@ -27,6 +28,27 @@
   border: 1px solid #fff;
 }
 
+.movies__caption {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.movies__show-all {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #4285F4;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1279px) {
   .movies {
     width: 100%;
@@ -37,6 +59,7 @@
 @media screen and (max-width: 767px) {
   .movies {
     padding: 0 10px 80px;
+    min-height: calc(100vh - 74px - 254px);
   }
 
   .movies__more {

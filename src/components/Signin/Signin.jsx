@@ -1,49 +1,77 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Greeting from "../Greeting/Greeting";
 import Logo from "../Logo/Logo";
-import { Link, useLocation } from "react-router-dom";
+import useFormValidation from "../../utils/hooks/useFormValidation";
+import { emailRegExp } from "../../utils/constants";
+import { pathValue } from "../../utils/constants";
+
 
 const Signin = (props) => {
+  const { btnValue, greeting, onLogin, pathname } = props;
 
-  const { btnValue, greeting, onLogin } = props;
-  const path = useLocation().pathname;
-  const handleLoginSubmit = (evt) => {
+  const {
+    input,
+    err,
+    handleChange,
+    isValid,
+  } = useFormValidation();
+
+  const handeLoginSubmit = (evt) => {
     evt.preventDefault();
-    onLogin();
-  }
+    const { email, password } = input;
+    onLogin(email, password);
+  };
 
   return (
     <div className="sign">
       <div className={'sign__container'}>
-        <Logo 
+        <Logo
           classAuth={'logo_type_auth'}
         />
         <Greeting
           text={greeting}
-          classAuth={'greeting_type_auth'}
+          selector={'greeting_type_auth'}
         />
-        <form action="/" className="sign__form" >
+        <form action="/" className="sign__form" onSubmit={handeLoginSubmit}>
           <fieldset className="sign__form-inputs">
             <label className="sign__formfield">E-mail
-              <input id="email-singin" type="email" className="sign__input" name="email" placeholder="email@example.com" required />
-              <span className="sign__input-error"> </span>
+              <input
+                id="email-singin"
+                type="email"
+                className="sign__input"
+                name="email"
+                placeholder="email@example.com"
+                value={input.email || ''}
+                onChange={handleChange}
+                pattern={emailRegExp}
+                required
+              />
+              <span className="sign__input-error">{err.email || ''}</span>
             </label>
             <label className="sign__formfield">Пароль
-              <input id="password-singin" type="password" className="sign__input" name="password" placeholder="Введите пароль"
-                minLength="6" required />
-              <span className="sign__input-error">Что-то пошло не так...</span>
+              <input
+                id="password-singin"
+                type="password"
+                className="sign__input"
+                name="password"
+                placeholder="Введите пароль"
+                value={input.password || ''}
+                onChange={handleChange}
+                minLength="6"
+                required
+              />
+              <span className="sign__input-error">{err.password || ''}</span>
             </label>
           </fieldset>
-          <button type="button" className="sign__save-input-btn" onClick={handleLoginSubmit}>{btnValue}</button>
+          <button type="submit" className="sign__save-input-btn" disabled={!isValid}>{btnValue}</button>
         </form>
-        {path === '/signin' ?
-          <p className="sign__caption">Ещё не зарегистрированы? <Link className="sign__caption sign__caption_type_link" to="/signup">Регистрация</Link></p> :
-          <p className="sign__caption">Уже зарегистрированы? <Link className="sign__caption sign__caption_type_link" to="/signin">Войти</Link></p>
+        {pathname === pathValue.signIn ?
+          <p className="sign__caption">Ещё не зарегистрированы? <Link className="sign__caption sign__caption_type_link" to={pathValue.signUp}>Регистрация</Link></p> :
+          <p className="sign__caption">Уже зарегистрированы? <Link className="sign__caption sign__caption_type_link" to={pathValue.signIn}>Войти</Link></p>
         }
       </div>
     </div>
-
-
   );
 };
 

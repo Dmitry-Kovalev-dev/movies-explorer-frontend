@@ -1,9 +1,10 @@
 import React from "react";
 
 const Greeting = (props) => {
-  const { text, classAuth } = props;
+  const { text, selector } = props;
+  const className = `greeting ${selector}`;
   return (
-    <h2 className={`greeting ${classAuth}`}>{text}</h2>
+    <h2 className={className}>{text}</h2>
   );
 };
 

@@ -2,17 +2,25 @@ import React from "react";
 import MovieCard from "../MovieCard/MovieCard";
 
 const MovieCardList = (props) => {
-  const { movies } = props;
+  const { movies, onSave, pathname, onDelete, classNameBtn, idSavedMovies } = props;
+
   return (
     <div className="movie-list">
-      {movies.map((movie, index) => {
-        return (
-          <MovieCard
-            key={index}
-            movie={movie}
-          />
-        )
-      })}
+      {
+        movies.map((movie) => {
+          return (
+            <MovieCard
+              key={movie.id || movie._id}
+              movie={movie}
+              onSave={onSave}
+              pathname={pathname}
+              onDelete={onDelete}
+              classNameBtn={classNameBtn}
+              idSavedMovies={idSavedMovies}
+            />
+          )
+        })
+      }
     </div>
   );
 };

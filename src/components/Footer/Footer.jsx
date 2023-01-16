@@ -1,9 +1,17 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { pathValue } from '../../utils/constants';
 
-const Footer = () => {
-  const path = useLocation().pathname;
-  const footerStyle = (path === '/profile' || path === '/signin' || path === '/signup' || path === '/404') ? { display: 'none' } : {};
+const Footer = (props) => {
+  const { pathname } = props;
+  
+  const footerStyle = (
+    pathname === pathValue.profile ||
+    pathname === pathValue.signIn ||
+    pathname === pathValue.signUp ||
+    pathname === pathValue.notFound) ?
+    { display: 'none' } :
+    {};
+
   return (
     <footer className="footer" style={footerStyle}>
       <p className="footer__caption">Учебный проект Яндекс.Практикум × BeatFilm.</p>
