@@ -7,7 +7,7 @@ export const navClasses = {
   profile: `${mainClassNavLink}_type_profile`,
 };
 
-export const baseUrl = 'http://localhost:3005';
+export const baseUrl = 'https://api.films.nomoredomains.club';
 export const movieUrl = 'https://api.nomoreparties.co/beatfilm-movies'
 export const emailRegExp = '^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,5}$';
 
