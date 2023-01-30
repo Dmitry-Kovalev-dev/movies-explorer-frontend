@@ -1,0 +1,19 @@
+:root {
+  --dark01: #202020;
+  --dark02: #272727;
+  --dark03: #222;
+  --dark04: #303030;
+  --dark05: #8B8B8B;
+  --btnBlue: #4285F4;
+  --contentWidth: 1140px;
+  --font: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--dark01);
+  min-height: 100vh;
+  position: relative;
+}

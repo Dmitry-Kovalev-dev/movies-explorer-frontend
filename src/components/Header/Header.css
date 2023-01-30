@@ -1,0 +1,55 @@
+.header {
+  max-width: calc(100% - (100% - 1280px));
+  margin: 0 auto;
+  padding: 0 70px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74px;
+  background-color: #073042;
+}
+
+.header__burger-btn {
+  display: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .header__burger-btn {
+    display: block;
+    background-image: url('../../images/navigation__burger.svg');
+    width: 44px;
+    height: 44px;
+    border: none;
+    background-color: transparent;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0 14px;
+  }
+
+  .header__signup {
+    font-size: 10px;
+    line-height: 1.6;
+    margin: 0 14px 0 0;
+  }
+
+  .header__signin {
+    font-size: 10px;
+    line-height: 1.6;
+    width: 54px;
+    height: 26px;
+  }
+}
+
+input {
+  margin-right: 5px;
+}

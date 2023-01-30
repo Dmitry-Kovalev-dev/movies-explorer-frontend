@@ -1,0 +1,250 @@
+.student {
+  display: flex;
+  flex-direction: column;
+  padding: 110px 70px 125px;
+}
+
+.student__info {
+  display: flex;
+  margin: 66px 0 100px;
+  justify-content: space-between;
+}
+
+.student__text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 0;
+}
+
+.student__name {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.student__career {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+  color: #fff;
+  margin: 0 0 26px;
+  padding: 0;
+}
+
+.student__about {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.57;
+  color: #fff;
+  margin: 0 0 100px;
+  padding: 0;
+}
+
+.student__link {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  text-decoration: none;
+  width: max-content;
+  transition: opacity .15s linear;
+}
+
+.student__link:hover {
+  opacity: .5;
+}
+
+
+.student__photo {
+  background-image: url(../../images/photo.jpg);
+  height: 327px;
+  width: 270px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.student__portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+.student__portfolio-title {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.11;
+  color: var(--dark05);
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.student__portfolio-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.student__portfolio-items {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.student__portfolio-item {
+  list-style: none;
+  border-bottom: 1px solid #424242;
+  transition: opacity .15s linear;
+}
+
+.student__portfolio-item:hover {
+  opacity: .5;
+}
+
+.student__portfolio-item:last-child {
+  border-bottom: none;
+}
+
+.student__portfolio-link {
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 3;
+  letter-spacing: -0.04em;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.student__item-arrow {
+  background-image: url(../../images/arrow.svg);
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-self: center;
+  transition: transform .2s linear;
+  background-size: contain;
+}
+
+.student__portfolio-item:hover .student__item-arrow {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1279px) {
+  .student {
+    padding: 90px 50px;
+  }
+
+  .student__info {
+    margin: 66px 0 90px;
+  }
+
+  .student__text {
+    max-width: calc(100vw * (364/768));
+    margin: 0 50px 0 0;
+  }
+
+  .student__name {
+    font-size: 40px;
+    line-height: 1;
+    margin: 0 0 16px;
+  }
+
+  .student__career {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+  }
+
+  .student__about {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .student__photo {
+    height: 307px;
+    width: 255px;
+  }
+
+  .student__portfolio-link {
+    font-size: 28px;
+    line-height: 3.21;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .student {
+    padding: 70px 18px;
+  }
+
+  .student__info {
+    flex-wrap: wrap;
+    margin: 60px 0 70px;
+  }
+
+  .student__text {
+    max-width: 284px;
+    margin: 0;
+    order: 2;
+  }
+
+  .student__name {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 20px;
+  }
+
+  .student__career {
+    font-size: 11px;
+    line-height: 1.45;
+    margin: 0 0 20px;
+  }
+
+  .student__about {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0 0 40px;
+  }
+
+  .student__photo {
+    height: 352px;
+    width: 284px;
+    margin: 0 0 40px;
+    order: 1;
+  }
+
+  .student__portfolio-title {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .student__portfolio-link {
+    font-size: 18px;
+    line-height: 3.83;
+  }
+
+  .student__item-arrow {
+    width: 10px;
+    height: 10px;
+  }
+}
